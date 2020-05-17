@@ -59,8 +59,6 @@ header {
   width: 100vw;
   top: 0;
 }
-
-
 .menu ul {
   display: flex;
   justify-content: space-around;
