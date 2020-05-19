@@ -1,9 +1,10 @@
-<<<<<<< HEAD
+
 *{
 margin:0;
 padding:0;
 box-sizing: border-box;  
 }
+
 
 
 body
@@ -88,12 +89,14 @@ a:hover {
   font-size: 4em;
   text-align: center;
   color: whitesmoke;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .site-subtitle {
  font-style: italic;
  text-align: center;
  color: whitesmoke;
+ font-family: 'Roboto Slab', serif;
 }
 
 .img-portfolio {
