@@ -26,6 +26,7 @@ header {
 @media (min-width: 360px) {
   body {
     font-size: 14px;
+    font-family: 'Roboto Slab', serif;
   }
 }
 
@@ -87,19 +88,55 @@ a:hover {
 
 .site-title {
   font-size: 4em;
+  font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
   color: whitesmoke;
-  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .site-subtitle {
- font-style: italic;
+ font-family: 'Roboto Slab', serif;
  text-align: center;
  color: whitesmoke;
- font-family: 'Roboto Slab', serif;
 }
 
-.img-portfolio {
-  height: 180px;
-  width: 180px;
+.portfolio{
+  padding: 2em;
 }
+.portfolio h2
+{
+  font-family: 'Roboto Slab', serif;
+  padding: 1.5em;
+  font-size: 2em;
+}
+.grid{
+  display: grid;
+  gap: 2em;
+  text-align: center;
+  grid-template-columns: 240px 240px;
+}
+
+
+@media(min-width: 560px){
+  .grid{
+    grid-template-columns: 240px 240px;
+  }
+}
+
+
+@media(min-width: 880px){
+  .grid{
+    grid-template-columns: 240px 240px 240px;
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 48px - 8em)
+  }
+}
+
+@media(min-width: 1280px){
+  .img-portfolio {
+    height: 180px;
+    width: 220px;
+    object-fit: cover;
+  }
+}
+
