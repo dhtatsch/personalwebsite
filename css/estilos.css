@@ -1,18 +1,15 @@
-
-*{
-margin:0;
-padding:0;
-box-sizing: border-box;  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-body
-{
-background-image:url('../img/background-image.jpg');  
-font-family: Arial;
-background-size: auto 100vh; 
-height: 100vh;  
+body {
+  background-image: url('../img/background-image.png');
+  font-family: 'Roboto Slab', serif;
+  background-size: auto auto;
+  height: 100vh;
+  font-size: 12px;
 }
 
 header {
@@ -22,15 +19,29 @@ header {
   align-items: center;
 }
 
+.titulo {
+  transform: scale(0.5) translateY(40vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
+
 @media (min-width: 360px) {
   body {
     font-size: 14px;
-    font-family: 'Roboto Slab', serif;
   }
 }
 
 /* breakpoint */
+
 @media (min-width: 600px) {
   body {
     font-size: 18px;
@@ -38,47 +49,51 @@ header {
 }
 
 /* breakpoint */
+
 @media (min-width: 1200px) {
   body {
     font-size: 20px;
-    background-image: none;
-    background-color: grey;
   }
 }
 
 /* breakpoint */
+
 @media (min-width: 1920px) {
   body {
     font-size: 24px;
-    background-image: none;
-    background-color: grey;
   }
 }
 
-.menu
-{
+.menu {
   background-color: white;
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
+
 .menu ul {
   display: flex;
   justify-content: space-around;
 }
 
 .menu li {
-  list-style: none; 
- }
+  list-style: none;
+}
 
- .menu a {
-  
+.menu a {
   display: block;
   padding: 10px 20px;
+  transition: background-color 2s, color 2s;
+}
+
+.menu a:active, .menu a:hover {
+  color: black;
+  background-color: grey;
 }
 
 a {
-  color: grey;
+  color: dimgrey;
   text-decoration: none;
 }
 
@@ -94,49 +109,96 @@ a:hover {
 }
 
 .site-subtitle {
- font-family: 'Roboto Slab', serif;
- text-align: center;
- color: whitesmoke;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  color: whitesmoke;
 }
 
-.portfolio{
+.contato, .portfolio {
   padding: 2em;
+  min-height: 100vh
 }
-.portfolio h2
-{
+
+.contato h2, .portfolio h2 {
   font-family: 'Roboto Slab', serif;
   padding: 1.5em;
   font-size: 2em;
 }
-.grid{
+
+.portfolio .grid {
   display: grid;
   gap: 2em;
   text-align: center;
-  grid-template-columns: 240px 240px;
 }
 
-
-@media(min-width: 560px){
-  .grid{
-    grid-template-columns: 240px 240px;
-  }
-}
-
-
-@media(min-width: 880px){
-  .grid{
-    grid-template-columns: 240px 240px 240px;
+@media(min-width: 370px) {
+  .grid {
+    grid-template-columns: 240px;
     justify-content: center;
     align-content: center;
     height: calc(100vh - 48px - 8em)
   }
 }
 
-@media(min-width: 1280px){
-  .img-portfolio {
-    height: 180px;
-    width: 220px;
-    object-fit: cover;
+@media(min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em -48px)
   }
 }
 
+@media(min-width: 880px) {
+  .grid {
+    grid-template-columns: 240px 240px 240px;
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 8em -48px)
+  }
+}
+
+@media(min-width: 1280px) {
+  .grid {
+    grid-template-columns: 240px 240px 240px 240px;
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 8em -48px)
+  }
+}
+
+@media(min-width: 1920px) {
+  .grid {
+    grid-template-columns: 240px 240px 240px 240px;
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 8em -48px)
+  }
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 220px;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.15);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 800ms;
+}
+
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7);
+}
