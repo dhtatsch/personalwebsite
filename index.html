@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <link rel="stylesheet" href="css/estilos.css">
@@ -16,7 +16,7 @@
   <header>
 
     <nav class="menu">
-      <ul>
+      <ul class="container">
 
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#portfolio">Projetos</a></li>
@@ -32,28 +32,95 @@
     </div>
 
   </header>
-  <section class="portfolio" id="portfolio">
+
+  <section class="sobre container" id="sobre">
+    <h2>Sobre</h2>
+
+    <figure class="avatar">
+      <img src="./img/pp.jpg" alt="Douglas Tatsch">
+    </figure>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem
+      atque architecto, odit doloremque consectetur vero! Aut fugit neque
+      sequi id non rerum facilis incidunt explicabo. Officia beatae vitae
+      laudantium!
+    </p>
+
+    <p>
+      Tenetur dicta rem ut aliquid quo eos non expedita impedit. Ipsa sapiente
+      corrupti iusto eum similique voluptatum magni velit sit ab, vitae quas,
+      perspiciatis excepturi, vel quaerat itaque dicta repudiandae?
+    </p>
+
+    <p>
+      Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+      repellendus! Sequi libero accusantium facere quis, dolores voluptate
+      itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+      facere aperiam quibusdam inventore.
+    </p>
+
+    <p>
+      Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+      repellendus! Sequi libero accusantium facere quis, dolores voluptate
+      itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+      facere aperiam quibusdam inventore.
+    </p>
+
+  </section>
+
+
+  <section class="portfolio container" id="portfolio">
     <h2>Projetos</h2>
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="Web">
-        <figcaption>Web</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-        <figcaption>Mobile</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Projetos pessoais">
-        <figcaption>Projetos pessoais</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Scrum">
-        <figcaption>Scrum</figcaption>
-      </figure>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="Web">
+          </figure>
+          <div class="card-back">
+            <h3>Web</h3>
+          </div>
+        </div>
+      </div>  
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+          </figure>
+          <div class="card-back">
+            <h3>Mobile</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio"  src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Projetos pessoais">
+          </figure>
+          <div class="card-back">
+            <h3>Projetos pessoais</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Scrum">
+          </figure>
+        <div class="card-back">
+          <h3>Scrum</h3>
+        </div>
+      </div>
+    </div>
+
     </div>
   </section>
-  <section class="contato" id="contato">
+  <section class="contato container" id="contato">
     <h2>Contato</h2>
     <div class="grid icons">
       <a target="_blank" href="https://github.com/dhtatsch">
