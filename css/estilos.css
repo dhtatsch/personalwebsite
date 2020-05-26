@@ -114,7 +114,7 @@ a:hover {
   color: whitesmoke;
 }
 
-sobre,
+.sobre,
 .contato, 
 .portfolio {
   padding: 2em;
@@ -159,6 +159,7 @@ sobre,
   color: white;
   text-indent: 1.4em;
   margin-left: 1em;
+  margin-right: 1em;
   margin-bottom: 1.1em;
   text-align: justify;
 }
